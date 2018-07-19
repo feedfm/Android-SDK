@@ -1,16 +1,16 @@
 # Android-SDK
 
-List of all releases can be found here 
+List of all releases can be found here
 
-[https://github.com/feedfm/Android-SDK/releases](https://github.com/feedfm/Android-SDK/releases
+[https://github.com/feedfm/Android-SDK/releases](https://github.com/feedfm/Android-SDK/releases)
 
 
 # Feed FM Android Sdk Release
 ### To Build with maven add any one of the following dependencies in your build file depending on which Exoplayer version you want to use.
-    `implementation fm.feed.android:player-sdk:${version}`
-    `implementation fm.feed.android:player-sdk-exo260:${version}`
-    `implementation fm.feed.android:player-sdk-exo261:${version}`
-    `implementation fm.feed.android:player-sdk-exo281:${version}`
+    `implementation fm.feed.android:player-sdk:X.X.X`
+    `implementation fm.feed.android:player-sdk-exo260:X.X.X`
+    `implementation fm.feed.android:player-sdk-exo261:X.X.X`
+    `implementation fm.feed.android:player-sdk-exo281:X.X.X`
 
 
  ### To build with AAR instead of Maven add following dependencies to your app.
