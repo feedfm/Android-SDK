@@ -87,3 +87,10 @@ FeedPlayerService.getInstance(new FeedAudioPlayer.AvailabilityListener() {
 
 }
 ```
+
+## Bugs!
+
+If you find a bug, please send an email to support@feed.fm with a description
+and any information you have to help us reproduce it.
+
+
