@@ -6,7 +6,7 @@
 [Get the latest release version from here](https://github.com/feedfm/Android-SDK/releases)
 
 ####  Maven
-To Build with maven add ** any one ** of the following dependencies in your build file depending on which Exoplayer version you want to use. If you do not have any other modules using exoplayer, use the default player-sdk.
+To Build with maven add **any one** of the following dependencies in your build file depending on which Exoplayer version you want to use. If you do not have any other modules using exoplayer, use the default player-sdk.
 ``` 
 implementation fm.feed.android:player-sdk:X.X.X           //contains exoplayer-core:2.13.1
 implementation fm.feed.android:player-sdk-exo290:X.X.X.   //contains exoplayer-core:2.9.0'
