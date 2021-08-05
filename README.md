@@ -7,11 +7,11 @@
 
 ####  Maven
 To Build with maven add ** any one ** of the following dependencies in your build file depending on which Exoplayer version you want to use. If you do not have any other modules using exoplayer, use the default player-sdk.
-```
-implementation fm.feed.android:player-sdk:X.X.X
-implementation fm.feed.android:player-sdk-exo260:X.X.X
-implementation fm.feed.android:player-sdk-exo261:X.X.X
-implementation fm.feed.android:player-sdk-exo281:X.X.X
+``` 
+implementation fm.feed.android:player-sdk:X.X.X           //contains exoplayer-core:2.13.1
+implementation fm.feed.android:player-sdk-exo290:X.X.X.   //contains exoplayer-core:2.9.0'
+implementation fm.feed.android:player-sdk-exo2106:X.X.X.  //contains exoplayer-core:2.10.6'
+implementation fm.feed.android:player-sdk-exo2118:X.X.X.  //contains exoplayer-core:2.11.8
 ```
 
 
@@ -20,10 +20,14 @@ implementation fm.feed.android:player-sdk-exo281:X.X.X
  Add following dependencies to your app in addition to the latest AAR file from here.
 
 ```
-  implementation 'com.google.code.gson:gson:2.8.2'
-  implementation 'com.squareup.retrofit2:retrofit:2.3.0'
-  implementation 'com.android.support:support-v4:27.1.1'
-  implementation 'com.google.android.exoplayer:exoplayer-core:2.X.X'
+   implementation 'com.google.code.gson:gson:2.8.6'
+   implementation 'com.squareup.okhttp3:logging-interceptor:4.9.0'
+   implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+   implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+   implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+   implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0'
+   implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.3'
+
 ```
 Replace X.X with version of exoplayer you are using, and use corresponding aar.
 
