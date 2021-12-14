@@ -8,10 +8,10 @@
 ####  Maven
 To Build with maven add **any one** of the following dependencies in your build file depending on which Exoplayer version you want to use. If you do not have any other modules using exoplayer, use the default player-sdk.
 ``` 
-implementation fm.feed.android:player-sdk:X.X.X           //contains exoplayer-core:2.13.1
-implementation fm.feed.android:player-sdk-exo290:X.X.X.   //contains exoplayer-core:2.9.0'
-implementation fm.feed.android:player-sdk-exo2106:X.X.X.  //contains exoplayer-core:2.10.6'
-implementation fm.feed.android:player-sdk-exo2118:X.X.X.  //contains exoplayer-core:2.11.8
+implementation fm.feed.android:player-sdk:X.X.X           //contains exoplayer-core:2.16.1
+implementation fm.feed.android:player-sdk-exo2118:X.X.X.   //contains exoplayer-core:2.11.8'
+implementation fm.feed.android:player-sdk-exo2131:X.X.X.  //contains exoplayer-core:2.13.1'
+implementation fm.feed.android:player-sdk-exo2151:X.X.X.  //contains exoplayer-core:2.15.1
 ```
 
 
