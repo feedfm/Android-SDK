@@ -19,7 +19,7 @@ allprojects {
  }
 }
 ```
-Then add the feed SDK to your project's build.gradle. Add **any one** of the following dependencies in your build file depending on which Exoplayer version you want to use. If you do not have any other modules using exoplayer, use the default player-sdk.
+Then add the feed SDK to your Module’s build.gradle. Add **any one** of the following dependencies in your build file depending on which Exoplayer version you want to use. If you do not have any other modules using exoplayer, use the default player-sdk.
 
 ```
 implementation 'fm.feed.AndroidSDK:player-sdk:6.2.0'         //contains exoplayer-core:2.16.1
