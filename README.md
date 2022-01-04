@@ -5,29 +5,54 @@
 
 [Get the latest release version from here](https://github.com/feedfm/Android-SDK/releases)
 
-####  Maven
-To Build with maven add **any one** of the following dependencies in your build file depending on which Exoplayer version you want to use. If you do not have any other modules using exoplayer, use the default player-sdk.
-``` 
-implementation fm.feed.android:player-sdk:X.X.X           //contains exoplayer-core:2.16.1
-implementation fm.feed.android:player-sdk-exo2118:X.X.X.   //contains exoplayer-core:2.11.8'
-implementation fm.feed.android:player-sdk-exo2131:X.X.X.  //contains exoplayer-core:2.13.1'
-implementation fm.feed.android:player-sdk-exo2151:X.X.X.  //contains exoplayer-core:2.15.1
+#### Jitpack (Recommend)
+[![](https://jitpack.io/v/fm.feed/AndroidSDK.svg)](https://jitpack.io/#fm.feed/AndroidSDK)
+
+
+Add jitpack repository to you root build.gradle file 
+
+```
+allprojects {
+ repositories {
+  ...
+  maven { url 'https://jitpack.io' }
+ }
+}
+```
+Then add the feed SDK to your project's build.gradle. Add **any one** of the following dependencies in your build file depending on which Exoplayer version you want to use. If you do not have any other modules using exoplayer, use the default player-sdk.
+
+```
+implementation 'fm.feed.AndroidSDK:player-sdk:6.2.0'         //contains exoplayer-core:2.16.1
+implementation 'fm.feed.AndroidSDK:player-sdk-exoAmzn:6.2.0' //contains exoplayer-core:2.13.3 compatible with Amazon fire tv
+implementation 'fm.feed.AndroidSDK:player-sdk-exo2118:6.2.0' //contains exoplayer-core:2.11.8
+implementation 'fm.feed.AndroidSDK:player-sdk-exo2131:6.2.0' //contains exoplayer-core:2.13.1
+implementation 'fm.feed.AndroidSDK:player-sdk-exo2151:6.2.0' //contains exoplayer-core:2.15.1
 ```
 
 
-#### To build with AAR file instead of Maven
+####  Maven Central 
+To Build with maven central add **any one** of the following dependencies in your build file depending on which Exoplayer version you want to use. If you do not have any other modules using exoplayer, use the default player-sdk.
+``` 
+implementation 'fm.feed.android:player-sdk:X.X.X'           //contains exoplayer-core:2.16.1
+implementation 'fm.feed.android:player-sdk-exo2118:X.X.X'  //contains exoplayer-core:2.11.8
+implementation 'fm.feed.android:player-sdk-exo2131:X.X.X'  //contains exoplayer-core:2.13.1
+implementation 'fm.feed.android:player-sdk-exo2151:X.X.X'  //contains exoplayer-core:2.15.1
+implementation 'fm.feed.android:player-sdk-exoAmzn:x.x.x' //contains exoplayer-core:2.13.2 compatible with Amazon fire tv
+```
+
+
+#### To build with AAR file instead
 
  Add following dependencies to your app in addition to the latest AAR file from here.
 
 ```
-   implementation 'com.google.code.gson:gson:2.8.6'
-   implementation 'com.squareup.okhttp3:logging-interceptor:4.9.0'
-   implementation 'com.squareup.retrofit2:retrofit:2.9.0'
-   implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
-   implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-   implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0'
-   implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.3'
-
+implementation 'com.google.code.gson:gson:2.8.6'
+implementation 'com.squareup.okhttp3:logging-interceptor:4.9.0'
+implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.1'
+implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.3'
 ```
 Replace X.X with version of exoplayer you are using, and use corresponding aar.
 
