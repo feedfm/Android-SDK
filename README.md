@@ -5,7 +5,18 @@
 
 [Get the latest release version from here](https://github.com/feedfm/Android-SDK/releases)
 
-#### Jitpack (Recommend)
+
+####  Maven Central (Recommend)
+To Build with maven central add **any one** of the following dependencies in your build file depending on which Exoplayer version you want to use. If you do not have any other modules using exoplayer, use the default player-sdk.
+``` 
+implementation 'fm.feed.android:player-sdk:X.X.X'           //contains exoplayer-core:2.16.1
+implementation 'fm.feed.android:player-sdk-exo2118:X.X.X'  //contains exoplayer-core:2.11.8
+implementation 'fm.feed.android:player-sdk-exo2131:X.X.X'  //contains exoplayer-core:2.13.1
+implementation 'fm.feed.android:player-sdk-exo2151:X.X.X'  //contains exoplayer-core:2.15.1
+implementation 'fm.feed.android:player-sdk-exoAmzn:x.x.x' //contains exoplayer-core:2.13.2 compatible with Amazon fire tv
+```
+
+#### Jitpack 
 [![](https://jitpack.io/v/fm.feed/AndroidSDK.svg)](https://jitpack.io/#fm.feed/AndroidSDK)
 
 
@@ -27,17 +38,6 @@ implementation 'fm.feed.AndroidSDK:player-sdk-exoAmzn:6.2.0' //contains exoplaye
 implementation 'fm.feed.AndroidSDK:player-sdk-exo2118:6.2.0' //contains exoplayer-core:2.11.8
 implementation 'fm.feed.AndroidSDK:player-sdk-exo2131:6.2.0' //contains exoplayer-core:2.13.1
 implementation 'fm.feed.AndroidSDK:player-sdk-exo2151:6.2.0' //contains exoplayer-core:2.15.1
-```
-
-
-####  Maven Central 
-To Build with maven central add **any one** of the following dependencies in your build file depending on which Exoplayer version you want to use. If you do not have any other modules using exoplayer, use the default player-sdk.
-``` 
-implementation 'fm.feed.android:player-sdk:X.X.X'           //contains exoplayer-core:2.16.1
-implementation 'fm.feed.android:player-sdk-exo2118:X.X.X'  //contains exoplayer-core:2.11.8
-implementation 'fm.feed.android:player-sdk-exo2131:X.X.X'  //contains exoplayer-core:2.13.1
-implementation 'fm.feed.android:player-sdk-exo2151:X.X.X'  //contains exoplayer-core:2.15.1
-implementation 'fm.feed.android:player-sdk-exoAmzn:x.x.x' //contains exoplayer-core:2.13.2 compatible with Amazon fire tv
 ```
 
 
