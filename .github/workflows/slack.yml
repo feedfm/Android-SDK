@@ -14,31 +14,15 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
+    - name: slack-send
+      uses: slackapi/slack-github-action@v1.24.0
       with:
-        node-version: '14'
-
-    - name: Install dependencies
-      run: npm install @slack/web-api
-
-    - name: Post to Slack
-      run: |
-        const { WebClient } = require('@slack/web-api');
-        
-        const token = process.env.SLACK_BOT_TOKEN;
-        const channel = '#sdk-releases'; // replace with your Slack channel
-        const releaseName = process.env.GITHUB_REF;
-        const releaseUrl = process.env.GITHUB_SERVER_URL + '/' + process.env.GITHUB_REPOSITORY + '/releases/tag/' + releaseName;
-
-        const web = new WebClient(token);
-
-        (async () => {
-          await web.chat.postMessage({
-            channel: channel,
-            text: `New Android release: [${releaseName}](${releaseUrl})`,
-          });
-        })();
-
+        channel-id: sdk-releases
+        slack-message: |
+          New release: [${{ github.event.release.tag_name }}](${{ github.event.release.html_url }})
+          Repository: ${{ github.repository }}
+          Author: ${{ github.event.release.author.login }}
+          Release Notes: ${{ github.event.release.body }}
       env:
         SLACK_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+  
