@@ -24,5 +24,5 @@ jobs:
           Author: ${{ github.event.release.author.login }}
           Release Notes: ${{ github.event.release.body }}
       env:
-        SLACK_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+        SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
   
