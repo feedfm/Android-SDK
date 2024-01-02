@@ -1,0 +1,43 @@
+name: Slack Notification on Release
+
+on:
+  release:
+    types:
+      - published
+
+jobs:
+  notify-slack:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '14'
+
+    - name: Install dependencies
+      run: npm install @slack/web-api
+
+    - name: Post to Slack
+      run: |
+        const { WebClient } = require('@slack/web-api');
+        
+        const token = process.env.SLACK_BOT_TOKEN;
+        const channel = '#sdk-releases'; // replace with your Slack channel
+        const releaseName = process.env.GITHUB_REF;
+        const releaseUrl = process.env.GITHUB_SERVER_URL + '/' + process.env.GITHUB_REPOSITORY + '/releases/tag/' + releaseName;
+
+        const web = new WebClient(token);
+
+        (async () => {
+          await web.chat.postMessage({
+            channel: channel,
+            text: `New Android release: [${releaseName}](${releaseUrl})`,
+          });
+        })();
+
+      env:
+        SLACK_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
