@@ -19,7 +19,7 @@ jobs:
       with:
         channel-id: sdk-releases
         slack-message: |
-          New release: [${{ github.event.release.tag_name }}](${{ github.event.release.html_url }})
+          New release: [Android SDK:${{ github.event.release.tag_name }}](${{ github.event.release.html_url }})
           Repository: ${{ github.repository }}
           Author: ${{ github.event.release.author.login }}
           Release Notes: ${{ github.event.release.body }}
