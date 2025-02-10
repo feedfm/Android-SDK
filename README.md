@@ -9,7 +9,7 @@
 ####  Maven Central (Recommend)
 To Build with maven central add the following dependencie in your build file.
 ``` 
-implementation 'fm.feed.android:player-sdk:6.11.0'           //contains Media3 version 1.4.0
+implementation 'fm.feed.android:player-sdk:7.0.0'           //contains Media3 version 1.4.0
 ```
 
 ### Exoplayer versions 
